@@ -10,10 +10,14 @@ import UIKit
 
 class LeagueVC: UIViewController {
     
+    var player: Player!
+    
+    @IBOutlet weak var nextBtn: BorderButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        player = Player()
     }
     
     @IBAction func onNextTapped(_ sender: Any) {
@@ -31,4 +35,22 @@ class LeagueVC: UIViewController {
     }
     */
 
+    @IBAction func onMensTapped(_ sender: Any) {
+        selectedLeague(leagueType: "mens")
+    }
+    
+    
+    @IBAction func onWomensTapped(_ sender: Any) {
+        selectedLeague(leagueType: "womens")
+    }
+    
+    
+    @IBAction func CoedTapped(_ sender: Any) {
+        selectedLeague(leagueType: "coed")
+    }
+    
+    func selectedLeague(leagueType: String) {
+        player.desiredLeague = leagueType
+        nextBtn.isHidden = false
+    }
 }
