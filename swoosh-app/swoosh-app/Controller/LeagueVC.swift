@@ -17,7 +17,6 @@ class LeagueVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         player = Player()
     }
     
