@@ -35,35 +35,67 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3nZ-2e-Njq" customClass="CurrencyTxtField" customModule="window_shopper" customModuleProvider="target">
                                 <rect key="frame" x="20" y="270" width="374" height="40"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYg-Qv-qMO">
+                                <rect key="frame" x="20" y="342" width="374" height="68.333333333333314"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-LN-m5S">
+                                <rect key="frame" x="186" y="410.33333333333331" width="42" height="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9W-MB-8eR">
+                                <rect key="frame" x="20" y="677" width="374" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VaT-yX-Gf4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Jtk-LN-m5S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3E1-fD-NbW"/>
+                            <constraint firstItem="OYg-Qv-qMO" firstAttribute="width" secondItem="3nZ-2e-Njq" secondAttribute="width" id="8LE-Sa-A7A"/>
+                            <constraint firstItem="x9W-MB-8eR" firstAttribute="width" secondItem="3nZ-2e-Njq" secondAttribute="width" id="CCo-IH-9iz"/>
                             <constraint firstItem="pba-Iu-zXY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E9Q-xL-eWJ"/>
+                            <constraint firstItem="OYg-Qv-qMO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EFz-xY-Got"/>
+                            <constraint firstItem="OYg-Qv-qMO" firstAttribute="top" secondItem="3nZ-2e-Njq" secondAttribute="bottom" constant="32" id="Isy-dS-mBy"/>
                             <constraint firstItem="nl5-zy-yCc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OoE-U4-bRA"/>
                             <constraint firstItem="nl5-zy-yCc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="QTY-Gt-xrQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pba-Iu-zXY" secondAttribute="trailing" id="SYO-I0-CDu"/>
                             <constraint firstItem="3nZ-2e-Njq" firstAttribute="top" secondItem="67s-vW-ZtO" secondAttribute="bottom" constant="32" id="ULQ-Hb-hVO"/>
+                            <constraint firstItem="x9W-MB-8eR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xlm-Xi-KhL"/>
                             <constraint firstItem="3nZ-2e-Njq" firstAttribute="leading" secondItem="67s-vW-ZtO" secondAttribute="leading" id="XxN-ip-7Cf"/>
+                            <constraint firstItem="Jtk-LN-m5S" firstAttribute="top" secondItem="OYg-Qv-qMO" secondAttribute="bottom" id="c0P-lk-QH2"/>
                             <constraint firstItem="67s-vW-ZtO" firstAttribute="top" secondItem="nl5-zy-yCc" secondAttribute="bottom" constant="48" id="c8U-Bu-sC4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="67s-vW-ZtO" secondAttribute="trailing" constant="20" id="dFY-SB-ey6"/>
                             <constraint firstItem="67s-vW-ZtO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lFq-NQ-Vkp"/>
                             <constraint firstItem="3nZ-2e-Njq" firstAttribute="trailing" secondItem="67s-vW-ZtO" secondAttribute="trailing" id="oUw-lQ-RGo"/>
                             <constraint firstItem="3nZ-2e-Njq" firstAttribute="height" secondItem="67s-vW-ZtO" secondAttribute="height" id="pcH-oa-VBz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x9W-MB-8eR" secondAttribute="bottom" constant="20" id="rwI-dS-Wx4"/>
                             <constraint firstItem="pba-Iu-zXY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wX0-of-cBY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pba-Iu-zXY" secondAttribute="bottom" id="xVv-Bx-FMH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="Jtk-LN-m5S" id="GU9-E4-RGC"/>
                         <outlet property="priceTxt" destination="3nZ-2e-Njq" id="NZ7-fI-oGD"/>
+                        <outlet property="resultLabel" destination="OYg-Qv-qMO" id="0Mm-Lx-J0z"/>
                         <outlet property="wageTxt" destination="67s-vW-ZtO" id="kst-lJ-MEh"/>
                     </connections>
                 </viewController>
