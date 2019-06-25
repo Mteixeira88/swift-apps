@@ -9,16 +9,11 @@
 import UIKit
 
 @IBDesignable
+// This is the VIEW for the text fields
 class CurrencyTxtField: UITextField {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
+    // by using the function "draw" we are building new elements inside this element
+    // never leave this function empty otherwise there will be some errors on the building
     override func draw(_ rect: CGRect) {
         let size: CGFloat = 20
         let currencyLbl = UILabel(frame: CGRect(x: 5, y: (frame.size.height / 2) - size / 2, width: size, height: size))
@@ -44,6 +39,7 @@ class CurrencyTxtField: UITextField {
         customizeView()
     }
     
+    // customizing the Text Field Input
     func customizeView() {
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2529159331)
         clipsToBounds = true

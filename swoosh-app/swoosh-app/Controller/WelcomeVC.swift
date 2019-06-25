@@ -8,6 +8,8 @@
 
         import UIKit
 
+        // This is the main controller for the main view
+        // VC -> View Controller
         class WelcomeVC: UIViewController {
 
             @IBOutlet weak var swoosh: UIImageView!
@@ -23,6 +25,7 @@
                 //bgImg.frame = view.frame
             }
             
+            // Go back to the previous screen
             @IBAction func unwindFromSkillVc(unwindSegue: UIStoryboardSegue) {
                 
             }
