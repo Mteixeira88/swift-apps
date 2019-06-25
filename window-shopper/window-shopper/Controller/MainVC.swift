@@ -26,8 +26,6 @@ class MainVC: UIViewController {
         calcBtn.addTarget(self, action: #selector(MainVC.calculate), for: .touchUpInside)
         wageTxt.inputAccessoryView = calcBtn
         priceTxt.inputAccessoryView = calcBtn
-        resultLabel.isHidden = true
-        hoursLbl.isHidden = true
     }
 
     @objc func calculate() {
@@ -36,7 +34,6 @@ class MainVC: UIViewController {
                 view.endEditing(true)
                 resultLabel.isHidden = false
                 hoursLbl.isHidden = false
-                
                 resultLabel.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
             }
         }
