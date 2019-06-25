@@ -1,5 +1,5 @@
 # Swift-apps
-This repo is for some SWIFT tutorials I'm following from [Udemy](https://www.udemy.com/devslopes-ios12/).
+This repo is for some SWIFT tutorials I'm following from [Udemy iOS 12 & Swift 4: From Beginner to Paid Professional](https://www.udemy.com/devslopes-ios12/).
 
 ## Begginer file
 File with the basic of switch such as variable types, conditionals, loops, etc...
