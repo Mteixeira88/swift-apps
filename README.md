@@ -14,3 +14,7 @@ App that uses the contraints options (Regular and Compact) to position the corre
 ## Window-Shopper app
 App that calculates how many hours we need to work to buy somehting by creating a button programatically and using drawRect on TextField VIEW.
 This app also has a very simple unit testing that verifies if the MODEL is working well.
+
+## Coder-Swag
+App that replicates an online store without any server conection (uses only local data).
+Uses TableViews and Protocols.
