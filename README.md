@@ -10,5 +10,5 @@ App that teaches how to use Auto Layout, how to use UI Stack views and passing d
 ## Dev-Profile app
 App that teaches what to position the correct layout for iPhone and iPad without any code and only using Auto Layout.
 
-## Window-Shapper app
+## Window-Shopper app
 App that teaches how to create a button programatically, uses drawRect on TextField Model and starts unit testing for calculations.
