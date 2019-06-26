@@ -83,17 +83,17 @@
                     <navigationItem key="navigationItem" title="CODER SWAG" id="u1o-9h-Rgx"/>
                     <connections>
                         <outlet property="categoryTable" destination="GmS-zj-cUg" id="WXv-pR-TwA"/>
-                        <segue destination="aGZ-yn-V38" kind="show" id="t35-qQ-h2K"/>
+                        <segue destination="aGZ-yn-V38" kind="show" identifier="ProductVC" id="t35-qQ-h2K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="-535.04464285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--ProductVC-->
         <scene sceneID="LmL-1p-F5p">
             <objects>
-                <viewController id="aGZ-yn-V38" sceneMemberID="viewController">
+                <viewController id="aGZ-yn-V38" customClass="ProductVC" customModule="coder_swag" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pb-Fk-5Ax">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,27 +112,27 @@
                                 <rect key="frame" x="0.0" y="70" width="414" height="704"/>
                                 <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pOV-Rp-xeo">
-                                    <size key="itemSize" width="201" height="278"/>
+                                    <size key="itemSize" width="180" height="278"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="amo-yV-6rz" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="201" height="278"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="amo-yV-6rz" customClass="ProductCell" customModule="coder_swag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="278"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="201" height="278"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="278"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt01" translatesAutoresizingMaskIntoConstraints="NO" id="ZTw-W3-VQf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="201" height="170"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="170"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="170" id="Q7l-PK-ocQ"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devslopes Logo Graphic T-Shirst" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhC-Zo-Kpw">
-                                                    <rect key="frame" x="12" y="178" width="177" height="62"/>
+                                                    <rect key="frame" x="12" y="178" width="156" height="62"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="62" id="mUn-Lf-gsn"/>
                                                     </constraints>
@@ -179,6 +179,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qmw-l0-FAq"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollection" destination="nJn-1N-T5w" id="NPL-gr-yGv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihB-Rt-ddJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
