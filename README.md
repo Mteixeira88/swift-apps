@@ -17,4 +17,5 @@ This app also has a very simple unit testing that verifies if the MODEL is worki
 
 ## Coder-Swag
 App that replicates an online store without any server conection (uses only local data).
-Uses TableViews and Protocols.
+Uses TableViews, ContentView and Protocols for both.
+Uses MVC design pattern
