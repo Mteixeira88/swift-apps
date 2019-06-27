@@ -27,9 +27,3 @@ Uses MVC design pattern
 
 ## XYZ app
 Simple app that shows how to use the Apple's acclerometer library.
-
-
-## Smack app
-App that replicates "Slack" with a chat room where you can create users and rooms, send and receive messages through a socket, login and logout users.
-
-This app uses CocoaPods, for those who familiar with NPM packages, this is the xCode NPM, basically it's packages coded by anyone and they have rates and you can install them in you project by downloading thei [app](https://cocoapods.org/app).
