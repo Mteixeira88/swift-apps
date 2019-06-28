@@ -3,6 +3,9 @@ This repo is for some SWIFT tutorials I'm following from [Udemy](https://www.ude
 
 All swift files have comments explaning what it's doing and why to do like that.
 
+# Swift 4.2
+This next applications were made using Swift 4.2 to learn how to interact with Swift following the tutotial from [Udemy](https://www.udemy.com/devslopes-ios12/)
+
 ## Begginer file
 File with the basic of switch such as variable types, conditionals, loops, etc...
 
@@ -27,3 +30,6 @@ Uses MVC design pattern
 
 ## XYZ app
 Simple app that shows how to use the Apple's acclerometer library.
+
+# Swift 5 (Swift UI)
+This next applications were made using Swift 5 and Swift UI to learn how to interact with this new framework following the official tutorial from Apple [SwiftUI](https://developer.apple.com/tutorials/swiftui).
