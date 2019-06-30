@@ -8,13 +8,14 @@
 
 import SwiftUI
 
-struct titleLabel : View {
-    var label: String?
+struct TitleLabel : View {
+    var label: String
 
     var body: some View {
         VStack {
-            Text(label!)
+            Text(label)
                 .font(.custom("Didot", size: 28))
+            
         }
         
     }
@@ -23,7 +24,7 @@ struct titleLabel : View {
 #if DEBUG
 struct titleLabel_Previews : PreviewProvider {
     static var previews: some View {
-        titleLabel(label: "Create a new account")
+        TitleLabel(label: "Create a new account")
     }
 }
 #endif

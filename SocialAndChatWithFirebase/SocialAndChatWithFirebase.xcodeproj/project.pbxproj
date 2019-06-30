@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1601E5D122C80DAF002B5B4D /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5D022C80DAF002B5B4D /* ButtonWithImage.swift */; };
+		1601E5D522C8BF57002B5B4D /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5D422C8BF57002B5B4D /* SignUp.swift */; };
+		1601E5E322C90283002B5B4D /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5E222C90283002B5B4D /* UI.swift */; };
+		1601E5E722C9056A002B5B4D /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5E622C9056A002B5B4D /* TextFieldInput.swift */; };
 		1674E36D22C7B0DD00DF65A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E36C22C7B0DD00DF65A0 /* AppDelegate.swift */; };
 		1674E36F22C7B0DD00DF65A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E36E22C7B0DD00DF65A0 /* SceneDelegate.swift */; };
 		1674E37122C7B0DD00DF65A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E37022C7B0DD00DF65A0 /* ContentView.swift */; };
 		1674E37322C7B0DE00DF65A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1674E37222C7B0DE00DF65A0 /* Assets.xcassets */; };
 		1674E37622C7B0DE00DF65A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1674E37522C7B0DE00DF65A0 /* Preview Assets.xcassets */; };
 		1674E37922C7B0DE00DF65A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1674E37722C7B0DE00DF65A0 /* LaunchScreen.storyboard */; };
-		1674E38722C7D31500DF65A0 /* titleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E38622C7D31500DF65A0 /* titleLabel.swift */; };
+		1674E38722C7D31500DF65A0 /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E38622C7D31500DF65A0 /* TitleLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1601E5D022C80DAF002B5B4D /* ButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
+		1601E5D422C8BF57002B5B4D /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; usesTabs = 1; };
+		1601E5E222C90283002B5B4D /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		1601E5E622C9056A002B5B4D /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
 		1674E36922C7B0DD00DF65A0 /* SocialAndChatWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAndChatWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1674E36C22C7B0DD00DF65A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1674E36E22C7B0DD00DF65A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +33,7 @@
 		1674E37522C7B0DE00DF65A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1674E37822C7B0DE00DF65A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1674E37A22C7B0DE00DF65A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1674E38622C7D31500DF65A0 /* titleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleLabel.swift; sourceTree = "<group>"; };
+		1674E38622C7D31500DF65A0 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1601E5D322C80E46002B5B4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1674E37022C7B0DD00DF65A0 /* ContentView.swift */,
+				1601E5D422C8BF57002B5B4D /* SignUp.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1674E36022C7B0DD00DF65A0 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +75,9 @@
 		1674E36B22C7B0DD00DF65A0 /* SocialAndChatWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				1601E5D322C80E46002B5B4D /* Controller */,
 				1674E38022C7C97D00DF65A0 /* Views */,
 				1674E36C22C7B0DD00DF65A0 /* AppDelegate.swift */,
-				1674E37022C7B0DD00DF65A0 /* ContentView.swift */,
 				1674E36E22C7B0DD00DF65A0 /* SceneDelegate.swift */,
 				1674E37222C7B0DE00DF65A0 /* Assets.xcassets */,
 				1674E37722C7B0DE00DF65A0 /* LaunchScreen.storyboard */,
@@ -81,7 +98,10 @@
 		1674E38022C7C97D00DF65A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1674E38622C7D31500DF65A0 /* titleLabel.swift */,
+				1674E38622C7D31500DF65A0 /* TitleLabel.swift */,
+				1601E5D022C80DAF002B5B4D /* ButtonWithImage.swift */,
+				1601E5E222C90283002B5B4D /* UI.swift */,
+				1601E5E622C9056A002B5B4D /* TextFieldInput.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1601E5E722C9056A002B5B4D /* TextFieldInput.swift in Sources */,
 				1674E36D22C7B0DD00DF65A0 /* AppDelegate.swift in Sources */,
+				1601E5E322C90283002B5B4D /* UI.swift in Sources */,
+				1601E5D522C8BF57002B5B4D /* SignUp.swift in Sources */,
 				1674E36F22C7B0DD00DF65A0 /* SceneDelegate.swift in Sources */,
 				1674E37122C7B0DD00DF65A0 /* ContentView.swift in Sources */,
-				1674E38722C7D31500DF65A0 /* titleLabel.swift in Sources */,
+				1601E5D122C80DAF002B5B4D /* ButtonWithImage.swift in Sources */,
+				1674E38722C7D31500DF65A0 /* TitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
