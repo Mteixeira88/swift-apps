@@ -9,7 +9,7 @@
 import SwiftUI
 import ProgressHUD
 
-struct SignUp : View {
+struct SignUpView : View {
 	@State var userSignUp =  SignUpModel.default
 
     var body: some View {
@@ -41,7 +41,7 @@ struct SignUp : View {
 				}
 				HStack {
 					Text("Already have an account?")
-					NavigationButton(destination: SignIn()) {
+					NavigationButton(destination: SignInView()) {
 						Text("Sign In")
 					}
 				}
@@ -56,7 +56,7 @@ struct SignUp : View {
 #if DEBUG
 struct SignUp_Previews : PreviewProvider {
     static var previews: some View {
-		SignUp()
+		SignUpView()
     }
 }
 #endif

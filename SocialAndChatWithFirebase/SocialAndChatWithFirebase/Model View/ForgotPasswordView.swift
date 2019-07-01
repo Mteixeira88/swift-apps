@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ForgotPassword : View {
+struct ForgotPasswordView : View {
     @State private var email: String = ""
     
     var body: some View {
@@ -36,7 +36,7 @@ struct ForgotPassword : View {
 #if DEBUG
 struct ForgotPassword_Previews : PreviewProvider {
     static var previews: some View {
-        ForgotPassword()
+        ForgotPasswordView()
     }
 }
 #endif

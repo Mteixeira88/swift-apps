@@ -9,7 +9,7 @@
 import SwiftUI
 import ProgressHUD
 
-struct SignIn : View {
+struct SignInView : View {
     @State var userSignIn =  SignInModel.default
     
     var body: some View {
@@ -41,7 +41,7 @@ struct SignIn : View {
             }
             Spacer()
                 HStack (alignment: .center) {
-                    NavigationButton(destination: ForgotPassword()) {
+                    NavigationButton(destination: ForgotPasswordView()) {
                         Text("Forgot Password?")
                         .accentColor(.black)
                     }
@@ -55,7 +55,7 @@ struct SignIn : View {
 #if DEBUG
 struct SignIn_Previews : PreviewProvider {
     static var previews: some View {
-        SignIn()
+        SignInView()
     }
 }
 #endif

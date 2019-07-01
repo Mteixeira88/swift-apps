@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct CreateAccountView : View {
     
     var body: some View {
         NavigationView {
@@ -27,13 +27,13 @@ struct ContentView : View {
                     
                     Spacer()
                     Text("OR")
-                    NavigationButton(destination: SignUp()) {
+                    NavigationButton(destination: SignUpView()) {
                         ButtonWithImage(buttonText: "Create a new account", buttonImage: "icon-chat")
                             .background(Color(red: 0 / 255, green: 0 / 255, blue: 0 / 255))
                     }
                     HStack {
                         Text("Already have an account?")
-                        NavigationButton(destination: SignIn()) {
+                        NavigationButton(destination: SignInView()) {
                             Text("Sign In")
                         }
                     }
@@ -51,7 +51,7 @@ struct ContentView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CreateAccountView()
     }
 }
 #endif
