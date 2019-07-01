@@ -15,7 +15,9 @@ struct ButtonWithImage : View {
     HStack(alignment: .center) {
         Spacer()
         Image(buttonImage)
+            .resizable()
             .offset(x: -10, y: 0)
+            .frame(width: 20, height: 20)
         Text(buttonText)
         Spacer()
         }

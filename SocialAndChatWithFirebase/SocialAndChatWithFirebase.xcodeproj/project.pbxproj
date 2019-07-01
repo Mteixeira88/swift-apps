@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		1601E5D122C80DAF002B5B4D /* ButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5D022C80DAF002B5B4D /* ButtonWithImage.swift */; };
 		1601E5D522C8BF57002B5B4D /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5D422C8BF57002B5B4D /* SignUp.swift */; };
-		1601E5E322C90283002B5B4D /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5E222C90283002B5B4D /* UI.swift */; };
 		1601E5E722C9056A002B5B4D /* TextFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5E622C9056A002B5B4D /* TextFieldInput.swift */; };
+		1601E5EB22CA0930002B5B4D /* SecureFieldInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5EA22CA0930002B5B4D /* SecureFieldInput.swift */; };
+		1601E5ED22CA1423002B5B4D /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5EC22CA1423002B5B4D /* SignIn.swift */; };
+		1601E5F122CA1B01002B5B4D /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1601E5F022CA1B01002B5B4D /* ForgotPassword.swift */; };
+		1601E5F322CA1D62002B5B4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1601E5F222CA1D62002B5B4D /* GoogleService-Info.plist */; };
+		1674559922CA23DA005B268D /* Pods_SocialAndChatWithFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA83701C52C1E2F34244407 /* Pods_SocialAndChatWithFirebase.framework */; };
+		167455A222CA4B56005B268D /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167455A122CA4B56005B268D /* SignUpService.swift */; };
+		167455A522CA4F70005B268D /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167455A422CA4F70005B268D /* SignUpModel.swift */; };
 		1674E36D22C7B0DD00DF65A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E36C22C7B0DD00DF65A0 /* AppDelegate.swift */; };
 		1674E36F22C7B0DD00DF65A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E36E22C7B0DD00DF65A0 /* SceneDelegate.swift */; };
 		1674E37122C7B0DD00DF65A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1674E37022C7B0DD00DF65A0 /* ContentView.swift */; };
@@ -21,10 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EA83701C52C1E2F34244407 /* Pods_SocialAndChatWithFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAndChatWithFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1601E5D022C80DAF002B5B4D /* ButtonWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithImage.swift; sourceTree = "<group>"; };
 		1601E5D422C8BF57002B5B4D /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; usesTabs = 1; };
-		1601E5E222C90283002B5B4D /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		1601E5E622C9056A002B5B4D /* TextFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInput.swift; sourceTree = "<group>"; };
+		1601E5EA22CA0930002B5B4D /* SecureFieldInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldInput.swift; sourceTree = "<group>"; };
+		1601E5EC22CA1423002B5B4D /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		1601E5F022CA1B01002B5B4D /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		1601E5F222CA1D62002B5B4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		167455A122CA4B56005B268D /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		167455A422CA4F70005B268D /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		1674E36922C7B0DD00DF65A0 /* SocialAndChatWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialAndChatWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1674E36C22C7B0DD00DF65A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1674E36E22C7B0DD00DF65A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +46,8 @@
 		1674E37822C7B0DE00DF65A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1674E37A22C7B0DE00DF65A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1674E38622C7D31500DF65A0 /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		3079C446142B888A1F3B2007 /* Pods-SocialAndChatWithFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAndChatWithFirebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialAndChatWithFirebase/Pods-SocialAndChatWithFirebase.release.xcconfig"; sourceTree = "<group>"; };
+		3EC62EDD73CC4BF458D65964 /* Pods-SocialAndChatWithFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAndChatWithFirebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialAndChatWithFirebase/Pods-SocialAndChatWithFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,19 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1674559922CA23DA005B268D /* Pods_SocialAndChatWithFirebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1601E5D322C80E46002B5B4D /* Controller */ = {
+		1601E5D322C80E46002B5B4D /* Model View */ = {
 			isa = PBXGroup;
 			children = (
 				1674E37022C7B0DD00DF65A0 /* ContentView.swift */,
 				1601E5D422C8BF57002B5B4D /* SignUp.swift */,
+				1601E5EC22CA1423002B5B4D /* SignIn.swift */,
+				1601E5F022CA1B01002B5B4D /* ForgotPassword.swift */,
 			);
-			path = Controller;
+			path = "Model View";
+			sourceTree = "<group>";
+		};
+		1674559C22CA265E005B268D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				167455A122CA4B56005B268D /* SignUpService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		167455A322CA4F55005B268D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				167455A422CA4F70005B268D /* SignUpModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1674E36022C7B0DD00DF65A0 = {
@@ -61,6 +94,8 @@
 			children = (
 				1674E36B22C7B0DD00DF65A0 /* SocialAndChatWithFirebase */,
 				1674E36A22C7B0DD00DF65A0 /* Products */,
+				25B0F3F49218DEE0407B34F9 /* Pods */,
+				46830AD9890C7910288996ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,7 +110,10 @@
 		1674E36B22C7B0DD00DF65A0 /* SocialAndChatWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				1601E5D322C80E46002B5B4D /* Controller */,
+				167455A322CA4F55005B268D /* Model */,
+				1674559C22CA265E005B268D /* Service */,
+				1601E5F222CA1D62002B5B4D /* GoogleService-Info.plist */,
+				1601E5D322C80E46002B5B4D /* Model View */,
 				1674E38022C7C97D00DF65A0 /* Views */,
 				1674E36C22C7B0DD00DF65A0 /* AppDelegate.swift */,
 				1674E36E22C7B0DD00DF65A0 /* SceneDelegate.swift */,
@@ -100,10 +138,27 @@
 			children = (
 				1674E38622C7D31500DF65A0 /* TitleLabel.swift */,
 				1601E5D022C80DAF002B5B4D /* ButtonWithImage.swift */,
-				1601E5E222C90283002B5B4D /* UI.swift */,
 				1601E5E622C9056A002B5B4D /* TextFieldInput.swift */,
+				1601E5EA22CA0930002B5B4D /* SecureFieldInput.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		25B0F3F49218DEE0407B34F9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3EC62EDD73CC4BF458D65964 /* Pods-SocialAndChatWithFirebase.debug.xcconfig */,
+				3079C446142B888A1F3B2007 /* Pods-SocialAndChatWithFirebase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		46830AD9890C7910288996ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EA83701C52C1E2F34244407 /* Pods_SocialAndChatWithFirebase.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1674E37D22C7B0DE00DF65A0 /* Build configuration list for PBXNativeTarget "SocialAndChatWithFirebase" */;
 			buildPhases = (
+				6DDCEE116000F16F31F2EE36 /* [CP] Check Pods Manifest.lock */,
 				1674E36522C7B0DD00DF65A0 /* Sources */,
 				1674E36622C7B0DD00DF65A0 /* Frameworks */,
 				1674E36722C7B0DD00DF65A0 /* Resources */,
+				A7F07B3A5A160BDB3BFB3F0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,12 +222,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				1674E37922C7B0DE00DF65A0 /* LaunchScreen.storyboard in Resources */,
+				1601E5F322CA1D62002B5B4D /* GoogleService-Info.plist in Resources */,
 				1674E37622C7B0DE00DF65A0 /* Preview Assets.xcassets in Resources */,
 				1674E37322C7B0DE00DF65A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DDCEE116000F16F31F2EE36 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocialAndChatWithFirebase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7F07B3A5A160BDB3BFB3F0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SocialAndChatWithFirebase/Pods-SocialAndChatWithFirebase-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialAndChatWithFirebase/Pods-SocialAndChatWithFirebase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1674E36522C7B0DD00DF65A0 /* Sources */ = {
@@ -179,12 +284,16 @@
 			files = (
 				1601E5E722C9056A002B5B4D /* TextFieldInput.swift in Sources */,
 				1674E36D22C7B0DD00DF65A0 /* AppDelegate.swift in Sources */,
-				1601E5E322C90283002B5B4D /* UI.swift in Sources */,
 				1601E5D522C8BF57002B5B4D /* SignUp.swift in Sources */,
+				167455A522CA4F70005B268D /* SignUpModel.swift in Sources */,
 				1674E36F22C7B0DD00DF65A0 /* SceneDelegate.swift in Sources */,
+				167455A222CA4B56005B268D /* SignUpService.swift in Sources */,
 				1674E37122C7B0DD00DF65A0 /* ContentView.swift in Sources */,
 				1601E5D122C80DAF002B5B4D /* ButtonWithImage.swift in Sources */,
+				1601E5ED22CA1423002B5B4D /* SignIn.swift in Sources */,
 				1674E38722C7D31500DF65A0 /* TitleLabel.swift in Sources */,
+				1601E5EB22CA0930002B5B4D /* SecureFieldInput.swift in Sources */,
+				1601E5F122CA1B01002B5B4D /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +427,7 @@
 		};
 		1674E37E22C7B0DE00DF65A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EC62EDD73CC4BF458D65964 /* Pods-SocialAndChatWithFirebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -337,6 +447,7 @@
 		};
 		1674E37F22C7B0DE00DF65A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3079C446142B888A1F3B2007 /* Pods-SocialAndChatWithFirebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
