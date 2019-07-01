@@ -7,10 +7,10 @@
 //
 
 import SwiftUI
+import ProgressHUD
 
 struct SignUp : View {
 	@State var userSignUp =  SignUpModel.default
-	@State var profile = SignUpModel.default
 
     var body: some View {
 		VStack(alignment: .leading) {
@@ -23,7 +23,14 @@ struct SignUp : View {
 				Spacer()
 				HStack {
 					Button(action: {
-						SignUpService.createAccount(userModel: self.userSignUp)
+						ProgressHUD.show()
+						UserService.createAccount(userModel: self.userSignUp,
+						onSuccess: {
+							ProgressHUD.showSuccess("User created with success")
+							self.userSignUp = SignUpModel.default
+						}) { (errorMessage) in
+							ProgressHUD.showError(errorMessage)
+						}
 					}) {
 						Text("Sign up")
 							.accentColor(.white)

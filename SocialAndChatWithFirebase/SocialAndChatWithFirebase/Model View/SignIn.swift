@@ -7,21 +7,29 @@
 //
 
 import SwiftUI
+import ProgressHUD
 
 struct SignIn : View {
-    @State private var password: String = ""
-    @State private var email: String = ""
+    @State var userSignIn =  SignInModel.default
     
     var body: some View {
         VStack(alignment: .leading) {
             TitleLabel(label: "Sign In")
             Spacer()
             VStack (spacing: 20){
-                TextFieldInput(bindingValue: $email, placeholder: "Emaill Address")
-                SecureFieldInput(passwordBinding: $password, placeholder: "Your Password")
+                TextFieldInput(bindingValue: $userSignIn.email, placeholder: "Emaill Address")
+                SecureFieldInput(passwordBinding: $userSignIn.password, placeholder: "Your Password")
                 Spacer()
                 HStack {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {
+                        UserService.signIn(userModel: self.userSignIn,
+                        onSuccess: {
+                            ProgressHUD.showSuccess("Login Success")
+                            self.userSignIn = SignInModel.default
+                        }) { (errorMessage) in
+                            ProgressHUD.showError(errorMessage)
+                        }
+                    }) {
                         Text("Sign In")
                             .accentColor(.white)
                         }

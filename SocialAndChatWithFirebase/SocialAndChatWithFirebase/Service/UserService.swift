@@ -11,12 +11,12 @@ import FirebaseAuth
 import FirebaseDatabase
 import ProgressHUD
 
-class SignUpService {
-    class func createAccount(userModel: SignUpModel) {
+class UserService {
+    class func createAccount(userModel: SignUpModel, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
         Auth.auth().createUser(withEmail: userModel.email, password: userModel.password) {
             (authDataResult, error) in
             if error != nil {
-                ProgressHUD.showError(error!.localizedDescription)
+                onError(error!.localizedDescription)
                 return
             }
             if let authData = authDataResult {
@@ -30,16 +30,23 @@ class SignUpService {
                 Database.database().reference().child("users").child(authData.user.uid).updateChildValues(userDict, withCompletionBlock: {
                     (error, ref) in
                     if error == nil {
-                        ProgressHUD.showSuccess("User created with success")
+                        onSuccess()
                     } else {
-                        ProgressHUD.showError("Something went wront. Please try again.")
+                        onError("Something went wront. Please try again.")
                     }
                 })
             }
         }
     }
     
-    private func postUser() {
-    
+    class func signIn(userModel: SignInModel, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        Auth.auth().signIn(withEmail: userModel.email, password: userModel.password) {
+            (authDataResult, error) in
+            if error != nil {
+                onError(error!.localizedDescription)
+                return
+            }
+            onSuccess()
+        }
     }
 }
