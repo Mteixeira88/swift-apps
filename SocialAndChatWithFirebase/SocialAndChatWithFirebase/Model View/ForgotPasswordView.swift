@@ -10,11 +10,22 @@ import SwiftUI
 import ProgressHUD
 
 struct ForgotPasswordView : View {
+    @Binding var dismissForgetPassword: Bool
     @State private var email: String = ""
     
     var body: some View {
         VStack(alignment: .leading, spacing: 40) {
-            TitleLabel(label: "Forgot Password")
+            HStack {
+                Button(action: {
+                    self.dismissForgetPassword.toggle()
+                }) {
+                    Text("X")
+                        .accentColor(.black)
+                }
+                Spacer()
+                TitleLabel(label: "Forgot Password")
+                Spacer()
+            }
             VStack (spacing: 20){
                 TextFieldInput(bindingValue: $email, placeholder: "Emaill Address")
                 HStack {
@@ -24,6 +35,7 @@ struct ForgotPasswordView : View {
                         onSuccess: {
                             ProgressHUD.showSuccess("An email was sent to reset your password. Check your inbox")
                             self.email = ""
+                            self.dismissForgetPassword.toggle()
                         }) { (errorMessage) in
                             ProgressHUD.showError(errorMessage)
                         }
@@ -42,11 +54,3 @@ struct ForgotPasswordView : View {
             .padding(24)
     }
 }
-
-#if DEBUG
-struct ForgotPassword_Previews : PreviewProvider {
-    static var previews: some View {
-        ForgotPasswordView()
-    }
-}
-#endif

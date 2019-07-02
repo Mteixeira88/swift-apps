@@ -11,12 +11,25 @@ import ProgressHUD
 
 struct SignInView : View {
     @State var userSignIn =  SignInModel.default
-    @State var isSuccess = false
+    @State var dismissForgetPassword = false
     
     var body: some View {
         VStack(alignment: .leading) {
             TitleLabel(label: "Sign In")
             Spacer()
+            HStack {
+                Spacer()
+//                Image("upload")
+//                    .resizable()
+//                    .frame(width: 100, height: 100)
+//                    .tapAction {
+//                        let picker = UIImagePickerController()
+//                        picker.sourceType = .photoLibrary
+//
+//                    }
+                Spacer()
+            }
+                .offset(y: -20)
             VStack (spacing: 20){
                 TextFieldInput(bindingValue: $userSignIn.email, placeholder: "Emaill Address")
                 SecureFieldInput(passwordBinding: $userSignIn.password, placeholder: "Your Password")
@@ -27,7 +40,6 @@ struct SignInView : View {
                         onSuccess: {
                             ProgressHUD.showSuccess("Login Success")
                             self.userSignIn = SignInModel.default
-                            self.isSuccess = true
                         }) { (errorMessage) in
                             ProgressHUD.showError(errorMessage)
                         }
@@ -43,10 +55,13 @@ struct SignInView : View {
             }
             Spacer()
                 HStack (alignment: .center) {
-                    NavigationButton(destination: ForgotPasswordView()) {
-                        Text("Forgot Password?")
+                    Button(action: {
+                        self.dismissForgetPassword.toggle()
+                    })
+                    { Text("Forgot Password?")
                         .accentColor(.black)
-                    }
+                        }
+                        .presentation(!dismissForgetPassword ? nil : Modal(ForgotPasswordView(dismissForgetPassword: $dismissForgetPassword)))
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
             }
