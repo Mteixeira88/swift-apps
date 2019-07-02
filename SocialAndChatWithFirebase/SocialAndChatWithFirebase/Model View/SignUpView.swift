@@ -11,6 +11,7 @@ import ProgressHUD
 
 struct SignUpView : View {
 	@State var userSignUp =  SignUpModel.default
+	@State var isSuccess =  false
 
     var body: some View {
 		VStack(alignment: .leading) {
@@ -39,7 +40,7 @@ struct SignUpView : View {
 						.padding(20)
 						.background(Color(red: 0 / 255, green: 0 / 255, blue: 0 / 255), cornerRadius: 5.0)
 				}
-				HStack {
+				HStack{
 					Text("Already have an account?")
 					NavigationButton(destination: SignInView()) {
 						Text("Sign In")
@@ -52,6 +53,7 @@ struct SignUpView : View {
         .padding(24)
     }
 }
+
 
 #if DEBUG
 struct SignUp_Previews : PreviewProvider {

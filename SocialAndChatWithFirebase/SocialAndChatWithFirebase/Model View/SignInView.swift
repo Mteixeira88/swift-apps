@@ -11,6 +11,7 @@ import ProgressHUD
 
 struct SignInView : View {
     @State var userSignIn =  SignInModel.default
+    @State var isSuccess = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -26,6 +27,7 @@ struct SignInView : View {
                         onSuccess: {
                             ProgressHUD.showSuccess("Login Success")
                             self.userSignIn = SignInModel.default
+                            self.isSuccess = true
                         }) { (errorMessage) in
                             ProgressHUD.showError(errorMessage)
                         }

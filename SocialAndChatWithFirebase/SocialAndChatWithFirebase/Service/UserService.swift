@@ -25,7 +25,7 @@ class UserService {
                     "email": authData.user.email!,
                     "userName": userModel.userName,
                     "profileImageURL": "",
-                    "status": ""
+                    "status": "Welcome to this app"
                 ]
                 Database.database().reference().child("users").child(authData.user.uid).updateChildValues(userDict, withCompletionBlock: {
                     (error, ref) in
@@ -42,6 +42,17 @@ class UserService {
     class func signIn(userModel: SignInModel, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
         Auth.auth().signIn(withEmail: userModel.email, password: userModel.password) {
             (authDataResult, error) in
+            if error != nil {
+                onError(error!.localizedDescription)
+                return
+            }
+            onSuccess()
+        }
+    }
+    
+    class func resetPassword(email: String, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) {
+            (error) in
             if error != nil {
                 onError(error!.localizedDescription)
                 return

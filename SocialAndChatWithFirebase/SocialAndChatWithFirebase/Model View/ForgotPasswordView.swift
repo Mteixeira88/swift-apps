@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ProgressHUD
 
 struct ForgotPasswordView : View {
     @State private var email: String = ""
@@ -17,7 +18,16 @@ struct ForgotPasswordView : View {
             VStack (spacing: 20){
                 TextFieldInput(bindingValue: $email, placeholder: "Emaill Address")
                 HStack {
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {
+                        ProgressHUD.show()
+                        UserService.resetPassword(email: self.email,
+                        onSuccess: {
+                            ProgressHUD.showSuccess("An email was sent to reset your password. Check your inbox")
+                            self.email = ""
+                        }) { (errorMessage) in
+                            ProgressHUD.showError(errorMessage)
+                        }
+                    }) {
                         Text("Reset Password")
                             .accentColor(.white)
                         }

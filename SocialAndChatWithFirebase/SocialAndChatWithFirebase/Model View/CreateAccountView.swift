@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CreateAccountView : View {
+    @State var dismissFlag = false
     
     var body: some View {
         NavigationView {
@@ -43,7 +44,7 @@ struct CreateAccountView : View {
                 Text("Terms of service")
                 Spacer()
                 }
-                .padding()
+                .padding(24)
         }
     }
 }
