@@ -30,8 +30,8 @@ struct SignUpView : View {
 					{
 						if image != nil {
 							Image(uiImage: image!).renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-								.resizable().frame(width: 120, height: 120)
-								.cornerRadius(60)
+								.resizable().frame(width: 70, height: 70)
+								.cornerRadius(35)
 								.shadow(radius: 10)
 						} else {
 							Image("upload").resizable().frame(width: 150, height: 150)
