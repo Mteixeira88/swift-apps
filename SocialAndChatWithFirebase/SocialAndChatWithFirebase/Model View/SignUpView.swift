@@ -15,12 +15,13 @@ struct SignUpView : View {
 	@State var isSuccess =  false
 	@State var isShown: Bool = false
 	@State var image: UIImage?
-
-    var body: some View {
+	@Binding var signInSuccess: Bool
+	
+	var body: some View {
 		VStack(alignment: .leading) {
-            TitleLabel(label: "Sign Up")
-            Spacer()
-            VStack (spacing: 20){
+			TitleLabel(label: "Sign Up")
+			Spacer()
+			VStack (spacing: 20){
 				HStack {
 					Spacer()
 					Button(action: {
@@ -29,16 +30,16 @@ struct SignUpView : View {
 					{
 						if image != nil {
 							Image(uiImage: image!).renderingMode(Image.TemplateRenderingMode?.init(Image.TemplateRenderingMode.original))
-								.resizable().frame(width: 150, height: 150)
-								.cornerRadius(75)
+								.resizable().frame(width: 120, height: 120)
+								.cornerRadius(60)
 								.shadow(radius: 10)
 						} else {
 							Image("upload").resizable().frame(width: 150, height: 150)
 						}
-					}
-					.presentation(!isShown ? nil : Modal(ImagePicker(isShown: $isShown, image: $image)))
+						}
+						.presentation(!isShown ? nil : Modal(ImagePicker(isShown: $isShown, image: $image)))
 					Spacer()
-				}
+					}
 					.offset(y: -20)
 				TextFieldInput(bindingValue: $userSignUp.userName, placeholder: "Full Name")
 				TextFieldInput(bindingValue: $userSignUp.email, placeholder: "Emaill Address")
@@ -52,9 +53,10 @@ struct SignUpView : View {
 							return
 						}
 						UserService.createAccount(userModel: self.userSignUp, imageData: imageSelected.jpegData(compressionQuality: 0.4),
-												  onSuccess: {
-													ProgressHUD.showSuccess("User created with success")
-													self.userSignUp = SignUpModel.default
+						onSuccess: {
+							ProgressHUD.showSuccess("User created with success")
+							self.userSignUp = SignUpModel.default
+							self.signInSuccess = true
 						}) { (errorMessage) in
 							ProgressHUD.showError(errorMessage)
 						}
@@ -68,23 +70,23 @@ struct SignUpView : View {
 				}
 				HStack{
 					Text("Already have an account?")
-					NavigationButton(destination: SignInView()) {
+					NavigationButton(destination: SignInView(signInSuccess: $signInSuccess)) {
 						Text("Sign In")
 					}
 				}
 				Spacer()
 			}
-            Spacer()
-        }
-        .padding(24)
-    }
+			Spacer()
+			}
+			.padding(24)
+	}
 }
 
 
-#if DEBUG
-struct SignUp_Previews : PreviewProvider {
-    static var previews: some View {
-		SignUpView()
-    }
-}
-#endif
+//#if DEBUG
+//struct SignUp_Previews : PreviewProvider {
+//	static var previews: some View {
+//		SignUpView()
+//	}
+//}
+//#endif

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CreateAccountView : View {
     @State var dismissFlag = false
+    @Binding var signInSuccess: Bool
     
     var body: some View {
         NavigationView {
@@ -21,20 +22,22 @@ struct CreateAccountView : View {
                         ButtonWithImage(buttonText: "Sign in with Facebook", buttonImage: "icon-facebook")
                         .background(Color(red: 59 / 255, green: 89 / 255, blue: 152 / 255))
                     }
-                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Button(action: {
+                        print(self.signInSuccess)
+                    }) {
                         ButtonWithImage(buttonText: "Sign in with Google", buttonImage: "icon-google")
                         }
                         .background(Color(red: 219 / 255, green: 68 / 255, blue: 55 / 255))
                     
                     Spacer()
                     Text("OR")
-                    NavigationButton(destination: SignUpView()) {
+                    NavigationButton(destination: SignUpView(signInSuccess: self.$signInSuccess)) {
                         ButtonWithImage(buttonText: "Create a new account", buttonImage: "icon-chat")
                             .background(Color(red: 0 / 255, green: 0 / 255, blue: 0 / 255))
                     }
                     HStack {
                         Text("Already have an account?")
-                        NavigationButton(destination: SignInView()) {
+                        NavigationButton(destination: SignInView(signInSuccess: self.$signInSuccess)) {
                             Text("Sign In")
                         }
                     }
@@ -49,11 +52,12 @@ struct CreateAccountView : View {
     }
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        CreateAccountView()
-    }
-}
-#endif
+//#if DEBUG
+//struct ContentView_Previews : PreviewProvider {
+//    @State var isLoggedIn = false
+//    static var previews: some View {
+//        CreateAccountView(signInSuccess: self.isLoggedIn)
+//    }
+//}
+//#endif
 

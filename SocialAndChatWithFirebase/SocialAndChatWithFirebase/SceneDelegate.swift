@@ -24,9 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             if Auth.auth().currentUser != nil {
-                window.rootViewController = UIHostingController(rootView: CreateAccountView())
+                window.rootViewController = UIHostingController(rootView: AppHomeView())
             } else {
-                window.rootViewController = UIHostingController(rootView: CreateAccountView())
+                window.rootViewController = UIHostingController(rootView: MainView())
             }
             self.window = window
             window.makeKeyAndVisible()

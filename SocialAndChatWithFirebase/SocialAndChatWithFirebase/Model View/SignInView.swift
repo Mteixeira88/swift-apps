@@ -12,6 +12,7 @@ import ProgressHUD
 struct SignInView : View {
     @State var userSignIn =  SignInModel.default
     @State var dismissForgetPassword = false
+    @Binding var signInSuccess: Bool
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,6 +24,8 @@ struct SignInView : View {
                 Spacer()
                 HStack {
                     Button(action: {
+                        self.signInSuccess = true
+                        return
                         ProgressHUD.show()
                         UserService.signIn(userModel: self.userSignIn,
                         onSuccess: {
@@ -57,10 +60,10 @@ struct SignInView : View {
     }
 }
 
-#if DEBUG
-struct SignIn_Previews : PreviewProvider {
-    static var previews: some View {
-        SignInView()
-    }
-}
-#endif
+//#if DEBUG
+//struct SignIn_Previews : PreviewProvider {
+//    static var previews: some View {
+//        SignInView()
+//    }
+//}
+//#endif
