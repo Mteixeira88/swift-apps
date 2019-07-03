@@ -10,10 +10,12 @@ import SwiftUI
 
 struct MainView : View {
     @State var signInSuccess = false
+    var autoLogin: Bool
+    
     var body: some View {
         return Group {
-            if signInSuccess {
-                AppHomeView()
+            if signInSuccess || autoLogin {
+                AppHomeView(signInSuccess: $signInSuccess)
             }
             else {
                 CreateAccountView(signInSuccess: $signInSuccess)
@@ -25,7 +27,7 @@ struct MainView : View {
 #if DEBUG
 struct MainView_Previews : PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(autoLogin: false)
     }
 }
 #endif

@@ -24,7 +24,7 @@ struct FooterTabView : View {
                     Text("Messages")
                 }
             }
-            .foregroundColor(moveToTab == 0 ? Color(red: 255/255.0, green: 255/255.0, blue: 255/255.0) : Color(red: 100/255.0, green: 100/255.0, blue: 100/255.0))
+            .foregroundColor(moveToTab == 0 ? Color(red: 0/255.0, green: 0/255.0, blue: 225/255.0) : Color(red: 100/255.0, green: 100/255.0, blue: 100/255.0))
             Spacer()
             Button(action: {
                 self.moveToTab = Double(1)
@@ -37,7 +37,7 @@ struct FooterTabView : View {
                     Text("Users")
                 }
             }
-            .foregroundColor(moveToTab == 1 ? Color(red: 255/255.0, green: 255/255.0, blue: 255/255.0) : Color(red: 100/255.0, green: 100/255.0, blue: 100/255.0))
+            .foregroundColor(moveToTab == 1 ? Color(red: 0/255.0, green: 0/255.0, blue: 225/255.0) : Color(red: 100/255.0, green: 100/255.0, blue: 100/255.0))
             Spacer()
             Button(action: {
                 self.moveToTab = Double(2)
@@ -50,9 +50,10 @@ struct FooterTabView : View {
                     Text("Profile")
                 }
             }
-            .foregroundColor(moveToTab == 2 ? Color(red: 255/255.0, green: 255/255.0, blue: 255/255.0) : Color(red: 100/255.0, green: 100/255.0, blue: 100/255.0))
+            .foregroundColor(moveToTab == 2 ? Color(red: 0/255.0, green: 0/255.0, blue: 225/255.0) : Color(red: 100/255.0, green: 100/255.0, blue: 100/255.0))
         }
-        .padding(24)
-        .background(Color(red: 220/255.0, green: 220/255.0, blue: 220/255.0))
+        .padding(16)
+        .background(Color(red: 255/255.0, green: 255/255.0, blue: 255/255.0))
+        .shadow(radius: 5)
     }
 }

@@ -81,4 +81,13 @@ class UserService {
             onSuccess()
         }
     }
+    
+    class func logoutUser(onError: @escaping(_ errorMessage: String) -> Void) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            onError(error.localizedDescription)
+            return
+        }
+    }
 }

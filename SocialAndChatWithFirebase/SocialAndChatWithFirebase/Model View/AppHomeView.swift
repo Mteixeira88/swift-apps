@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AppHomeView : View {
     @State var moveToTab = Double(0)
+    @Binding var signInSuccess: Bool
     
     var body: some View {
         return Group {
@@ -18,16 +19,8 @@ struct AppHomeView : View {
             } else if self.moveToTab == 1 {
                 UsersView(moveToTab: $moveToTab)
             } else {
-                ProfileView(moveToTab: $moveToTab)
+                ProfileView(moveToTab: $moveToTab, signInSuccess: $signInSuccess)
             }
         }
     }
 }
-
-#if DEBUG
-struct AppHomeView_Previews : PreviewProvider {
-    static var previews: some View {
-        AppHomeView()
-    }
-}
-#endif
