@@ -17,25 +17,13 @@ struct SignInView : View {
         VStack(alignment: .leading) {
             TitleLabel(label: "Sign In")
             Spacer()
-            HStack {
-                Spacer()
-//                Image("upload")
-//                    .resizable()
-//                    .frame(width: 100, height: 100)
-//                    .tapAction {
-//                        let picker = UIImagePickerController()
-//                        picker.sourceType = .photoLibrary
-//
-//                    }
-                Spacer()
-            }
-                .offset(y: -20)
             VStack (spacing: 20){
                 TextFieldInput(bindingValue: $userSignIn.email, placeholder: "Emaill Address")
                 SecureFieldInput(passwordBinding: $userSignIn.password, placeholder: "Your Password")
                 Spacer()
                 HStack {
                     Button(action: {
+                        ProgressHUD.show()
                         UserService.signIn(userModel: self.userSignIn,
                         onSuccess: {
                             ProgressHUD.showSuccess("Login Success")
@@ -60,8 +48,8 @@ struct SignInView : View {
                     })
                     { Text("Forgot Password?")
                         .accentColor(.black)
-                        }
-                        .presentation(!dismissForgetPassword ? nil : Modal(ForgotPasswordView(dismissForgetPassword: $dismissForgetPassword)))
+                    }
+                    .presentation(!dismissForgetPassword ? nil : Modal(ForgotPasswordView(dismissForgetPassword: $dismissForgetPassword)))
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
             }
